@@ -5,7 +5,12 @@ class HomeController
 {
   function index(): void 
   {
-    echo "HomeController.index()";
+    $model = [
+      'title'   => 'Belajar PHP MVC',
+      'content' => 'Selamat Belajar PHP MVC'
+    ];
+
+    View::render('Home/index', $model);
   }
 
    function hello(): void 
